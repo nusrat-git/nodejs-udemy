@@ -1,33 +1,15 @@
+//assignment 3
+
 const express = require("express");
+const mainRoutes = require("./routes/index");
 const app = express();
 const port = 3000;
 
-app.get("/", (req, res) => {
-  res.render();
-});
-app.get("/users", (req, res) => {
-  res.render();
-});
-app.post("/add-user", (req, res) => {
-  res.redirect('/');
-});
+app.use(mainRoutes);
 
 app.listen(port, () => {
-  console.log(`assignment 4 listening on port ${port}`);
+  console.log(`Assignment 3 listening on port ${port}`);
 });
-
-//assignment 3
-
-// const express = require("express");
-// const mainRoutes = require("./routes/index");
-// const app = express();
-// const port = 3000;
-
-// app.use(mainRoutes);
-
-// app.listen(port, () => {
-//   console.log(`Assignment 3 listening on port ${port}`);
-// });
 
 //assignment 2
 
